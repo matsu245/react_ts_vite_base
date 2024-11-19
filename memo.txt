@@ -1,0 +1,32 @@
+
+
+# パッケージ
+Tailwind
+ESLint
+Prettier
+
+
+
+
+# 【React】Viteを使って爆速で環境構築を行う: ESLint Prettier
+https://tech-lab.sios.jp/archives/37726
+
+
+
+# フロントエンドのディレクトリ設計思想
+https://zenn.dev/mybest_dev/articles/c0570e67978673#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90%E3%81%AE%E4%BE%8B
+
+
+
+# Tailwind整形パッケージの違い
+特徴	              prettier-plugin-tailwindcss	   eslint-plugin-tailwindcss
+目的	              クラス名の並び順を自動整形	     クラス名の静的解析（タイポやルール違反の検出）
+使用ツール    	     Prettier	                      ESLint
+クラス順序整理	     自動で並べ替え	                 並べ替えの指摘や警告のみ
+誤ったクラス名の検出	不可	                         可能
+設定の柔軟性	       設定不要、公式ルールに準拠	      ルールをカスタマイズ可能
+利便性              Prettier と一緒にフォーマット	   コードの静的解析やバリデーションで総合的に管理
+使用例	            ファイル保存時に自動整形	       開発中の警告や CI ツールでエラーとして検出
+
+prettier-plugin-tailwindcss をクラス順序整理に、eslint-plugin-tailwindcss をクラス名検証に使うことで補完し合う形が理想的
+
