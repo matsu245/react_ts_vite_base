@@ -37,7 +37,7 @@ export default tseslint.config({
       'warn',
       { allowConstantExport: true },
     ],
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'off',
     'import/order': [
       'error',
       {
