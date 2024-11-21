@@ -32,13 +32,16 @@ export default tseslint.config({
     prettier: prettier,
   },
   rules: {
+    ...js.configs.recommended.rules,
+    ...tseslint.configs.recommended.rules,
+    ...reactHooks.configs.recommended.rules,
     'react-hooks/rules-of-hooks': 'error',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
     'unused-imports/no-unused-imports': 'off', // 自動削除を無効化
-    'no-unused-vars': 'warn', // 未使用変数を警告として表示
+    'no-unused-vars': 'warn',
     'import/order': [
       'error',
       {
@@ -75,7 +78,5 @@ export default tseslint.config({
     ],
     'tailwindcss/classnames-order': 'off', // クラス名のソートは prettier-plugin-tailwindcss に任せる
     'tailwindcss/no-custom-classname': 'off',
-    ...js.configs.recommended.rules,
-    ...tseslint.configs.recommended.rules,
   },
 });
