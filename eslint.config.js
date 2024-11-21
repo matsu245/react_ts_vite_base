@@ -37,7 +37,8 @@ export default tseslint.config({
       'warn',
       { allowConstantExport: true },
     ],
-    'unused-imports/no-unused-imports': 'off',
+    'unused-imports/no-unused-imports': 'off', // 自動削除を無効化
+    'no-unused-vars': 'warn', // 未使用変数を警告として表示
     'import/order': [
       'error',
       {
@@ -50,7 +51,7 @@ export default tseslint.config({
           'type',
           'index',
         ],
-          'newlines-between': 'always', // グループ毎に改行を入れる
+        'newlines-between': 'always', // グループ毎に改行を入れる
         pathGroupsExcludedImportTypes: ['builtin'],
         alphabetize: {
           order: 'asc',
